@@ -38,24 +38,47 @@
       <h2 id="products" class="main-products__h2">Products</h2>
       <div class="products-carousel">
         <button class="products-carousel__prev">←</button>
-        <div class="products-carousel__slides"></div> 
+        <div class="products-carousel__slides"></div>
         <button class="products-carousel__next">→</button>
       </div>
+      <select class="main-products__currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="PLN">PLN</option>
+        <option value="UAH">UAH</option>
+      </select>
+      <!-- <input type="text" class="main-products__currency" value="USD"> -->
+      <button class="main-products__convert">Convert</button>
       <div class="main-products__list"></div>
     </section>
   </main>
   <footer id="contacts" class="footer container">
     <h2>Contact <span class="ui-brand">Us</span></h2>
-    <form action="" class="footer__contacts">
-      <input type="text" name="name" placeholder="name" />
-      <input type="email" name="email" placeholder="email" />
-      <button class="button button-card">Submit</button>
+    <form id="contact-form-formspree" action="https://formspree.io/f/xpzyvoez" method="POST">
+      <h3>Formspree</h3>
+      <label>Email:</label>
+      <input type="email" name="email" />
+      <label>Message:</label>
+      <input type="text" name="message" />
+      <button>Submit</button>
     </form>
+    <form id="contact-form-nodejs" action="api/contact" method="POST">
+      <h3>NodeJS</h3>
+      <label>Email:</label>
+      <input type="email" name="email" />
+      <label>Message:</label>
+      <input type="text" name="message" />
+      <button>Submit</button>
+    </form>
+    <p id="contact-form-status"></p>
   </footer>
   <script src="js/change-title.js"></script>
   <script src="js/clock.js"></script>
   <script src="js/product-list.js"></script>
   <script src="js/products-carousel.js"></script>
+  <script src="js/contact-form-formspree.js"></script>
+  <script src="js/contact-form-node.js"></script>
+  <script src="js/refreshpage.js"></script>
 </body>
 
 </html>
